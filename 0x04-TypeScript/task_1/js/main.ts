@@ -60,11 +60,12 @@ class StudentClass implements StudentClassInterface{
         this.lastName = args.lastName;
     }
 
-    public workOnHomeWork() : string {
+    workOnHomeWork() : string {
         return "Currently working"
     }
 
-    public displayName() : string {
+    displayName() : string {
         return this.firstName
     }
 }
+

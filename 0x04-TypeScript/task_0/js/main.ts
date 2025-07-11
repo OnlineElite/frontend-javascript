@@ -1,3 +1,4 @@
+////////////////////// Task 0 //////////////////////////
 interface Student {
     firstName : string
     lastName : string
