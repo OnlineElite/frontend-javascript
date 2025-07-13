@@ -1,21 +1,23 @@
+/// <reference path="./Teacher.ts" />
+/// <reference path="./Subject.ts" />
 namespace Subjects{
     
     export interface Teacher {
         experienceTeachingJava? : number;
     }
 
-    export class React {
+    export class Java extends Subject{
 
         getRequirements() : string {
             return "Here is the list of requirements for Java"
         }
 
         getAvailableTeacher(teacher : Teacher) : string {
-            if(teacher && teacher.experienceTeachingJava !== undefined){
-                return `Available Teacher:${teacher.firstName}`
+            if(teacher.experienceTeachingJava === undefined || teacher.experienceTeachingJava <= 0){
+                return "No available teacher"
             }
             else {
-                return "No available teacher"
+                return `Available Teacher:${teacher.firstName}`
             }
         }
     }
